@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-    @actors = Actor.all
+    @actor = Actor.all
   end
 
   def show
@@ -28,7 +28,6 @@ class ActorsController < ApplicationController
 
   def update_row
     @actor = Actor.find(params[:id])
-
     @actor.dob = params[:dob]
     @actor.name = params[:name]
     @actor.bio = params[:bio]
